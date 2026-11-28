@@ -217,7 +217,7 @@ footer{padding:22px 0 40px;font:12px var(--mono);color:var(--dim);border-top:1px
       <div class="hd"><span>Test results</span><span>from the repos</span></div>
       <div class="row"><span class="p">PASS</span><span class="v">102,044 / 102,044</span><span class="d">market events from a 69-minute real feed, FPGA matching engine identical to the C++ reference</span></div>
       <div class="row"><span class="p">PASS</span><span class="v">3.4 µs p50</span><span class="d">packet to trading features in the FPGA engine (p99 7.6 µs), down from 8.8 µs</span></div>
-      <div class="row"><span class="p">PASS</span><span class="v">32 / 33</span><span class="d">real gym sets counted exactly by my wearable, all 33 within one rep</span></div>
+      <div class="row"><span class="p">PASS</span><span class="v">32 / 33</span><span class="d">real gym sets counted exactly by my wearable (prototype pod), all 33 within one rep</span></div>
       <div class="row"><span class="p">PASS</span><span class="v">3,809 values</span><span class="d">of real market data through my Tiny Tapeout block (1×2 tiles), matching the model</span></div>
     </div>
   </div>
@@ -292,15 +292,15 @@ footer{padding:22px 0 40px;font:12px var(--mono);color:var(--dim);border-top:1px
       </article>
 
       <article class="pcard">
-        <div class="media"><img src="board_pod.webp" alt="Copper layers of the nRF52840 wrist pod board" style="max-width:62%"></div>
+        <div class="media"><img src="board_pod.webp" alt="Top copper of the pod v2 board: nRF52840 module, IMU, flash and charger on 41 x 18 mm" style="max-width:88%"></div>
         <div class="body">
-          <div class="top"><span class="ref"><b>U4</b>Wearable</span><span class="status">In daily use · custom board ordered</span></div>
+          <div class="top"><span class="ref"><b>U4</b>Wearable</span><span class="status">Built · in daily use</span></div>
           <h3>Lift tracker wearable</h3>
-          <p>A wrist motion-sensor pod and an Android app that count gym reps while you lift and end the set on their own.</p>
+          <p>A Fitbit-sized wrist pod and an Android app that count gym reps while you lift, grade each rep's range of motion and end the set on their own.</p>
           <ul class="facts">
-            <li><b>32 of 33</b> real sets counted exactly, all within one rep</li>
-            <li>The app's Kotlin counter is checked against a Python reference model in CI</li>
-            <li>Custom 4-layer pod board: nRF52840, LSM6DSV16X IMU, charger, thinner than a Fitbit Air</li>
+            <li><b>32 of 33</b> real sets counted exactly on the prototype, all within one rep; the Kotlin counter is checked against a Python reference model in CI</li>
+            <li>My own 4-layer board (nRF52840, LSM6DSV16X), <b>0.55 mm thinner than a Fitbit Air</b>, charging on its charger, firmware updates over Bluetooth</li>
+            <li>Bring-up: debugged a board that killed its battery, a sealed pod with no reset button (added a watchdog) and a 25%-in-two-hours battery drain</li>
           </ul>
           <div class="links"><a href="https://github.com/silverajat/lift-tracker" target="_blank" rel="noopener">Repo ↗</a></div>
         </div>
